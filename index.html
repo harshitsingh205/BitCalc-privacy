@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BitCalc Privacy Policy</title>
+<meta name="description" content="BitCalc does not collect, store, transmit, or share any personal data. All calculations run offline on your device.">
+<style>
+:root{
+  --bg:#f3f6fb; --surface:#ffffff; --text:#14213d; --muted:#51607a; --line:#d9e1ee;
+  --brand:#1d4ed8; --brand-soft:#e6eeff; --head1:#0a1230; --head2:#173a96; --ok:#0f7a4a; --ok-soft:#e3f6ec;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1020; --surface:#121a30; --text:#e6ecfa; --muted:#9fb0d0; --line:#24304f;
+    --brand:#7aa2ff; --brand-soft:#1a2750; --head1:#050914; --head2:#10286b; --ok:#5fd6a0; --ok-soft:#10301f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1020; --surface:#121a30; --text:#e6ecfa; --muted:#9fb0d0; --line:#24304f;
+  --brand:#7aa2ff; --brand-soft:#1a2750; --head1:#050914; --head2:#10286b; --ok:#5fd6a0; --ok-soft:#10301f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 "Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
+
+header{background:linear-gradient(120deg,var(--head1),var(--head2));color:#fff;padding:28px 24px 44px}
+.bar{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:14px}
+.logo{width:44px;height:44px;border-radius:11px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font:700 24px "Segoe UI",sans-serif}
+.brand{font-weight:650;font-size:18px;letter-spacing:.2px}
+.brand small{display:block;font-weight:400;font-size:13px;opacity:.75}
+#theme{margin-left:auto;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer}
+#theme:hover{background:rgba(255,255,255,.22)}
+.hero{max-width:1080px;margin:36px auto 0}
+.hero h1{margin:0 0 8px;font-size:clamp(30px,5vw,46px);line-height:1.15;font-weight:700}
+.hero p{margin:0;max-width:62ch;font-size:18px;opacity:.88}
+
+.wrap{max-width:1080px;margin:-24px auto 0;padding:0 24px 64px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:40px;align-items:start}
+nav{position:sticky;top:20px;padding-top:40px}
+nav p{margin:0 0 8px;font-size:14px;font-weight:600;color:var(--muted)}
+nav a{display:block;padding:6px 12px;margin-left:-12px;border-left:3px solid transparent;color:var(--muted);text-decoration:none;font-size:15px;line-height:1.4}
+nav a:hover{color:var(--text)}
+nav a.active{color:var(--brand);border-left-color:var(--brand);font-weight:600}
+
+.glance{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 10px 30px rgba(10,18,48,.12)}
+.glance h2{margin:0 0 4px;font-size:20px}
+.glance>p{margin:0 0 16px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.facts li{background:var(--ok-soft);border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4}
+.facts svg{flex:none;width:20px;height:20px;margin-top:1px;stroke:var(--ok);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.facts b{display:block}
+
+article{margin-top:32px}
+section{padding:28px 0;border-top:1px solid var(--line)}
+section:first-child{border-top:0;padding-top:0}
+h2.s{margin:0 0 10px;font-size:24px;line-height:1.3}
+p,li{max-width:70ch}
+ul{padding-left:22px}
+li{margin:6px 0}
+.quote{border-left:4px solid var(--brand);background:var(--brand-soft);padding:14px 18px;border-radius:0 10px 10px 0;max-width:70ch;margin:14px 0}
+table{width:100%;max-width:760px;border-collapse:collapse;margin:14px 0;font-size:15px;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--brand-soft);font-weight:600}
+tr:last-child td{border-bottom:0}
+.tw{overflow-x:auto}
+footer{max-width:1080px;margin:0 auto;padding:0 24px 40px;color:var(--muted);font-size:14px}
+
+@media (max-width:820px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  nav{position:static;padding-top:48px}
+  nav .links{display:flex;flex-wrap:wrap;gap:6px}
+  nav a{border:1px solid var(--line);border-radius:20px;margin:0;padding:5px 12px;background:var(--surface)}
+  nav a.active{border-color:var(--brand)}
+  .glance{margin-top:0}
+}
+@media print{
+  header{background:none;color:#000;padding:0}#theme,nav{display:none}.wrap{display:block;margin:0}
+  .glance{box-shadow:none}body{background:#fff;color:#000}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="logo" aria-hidden="true">B</div>
+    <div class="brand">BitCalc<small>Programmer Calculator &amp; Protocol Suite</small></div>
+    <button id="theme" type="button" aria-label="Switch colour theme">Dark mode</button>
+  </div>
+  <div class="hero">
+    <h1>Privacy Policy</h1>
+    <p>BitCalc does not collect, store, transmit, or share any personal data or usage analytics. Everything happens on your device.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav aria-label="Page sections">
+    <p>On this page</p>
+    <div class="links">
+      <a href="#summary">Summary</a>
+      <a href="#collect">Data we collect</a>
+      <a href="#offline">Offline by design</a>
+      <a href="#local">Data on your device</a>
+      <a href="#third">Third parties</a>
+      <a href="#store">Microsoft Store</a>
+      <a href="#children">Children</a>
+      <a href="#changes">Policy changes</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="glance" id="summary">
+      <h2>BitCalc at a glance</h2>
+      <p>What the app does with your information, in short.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><span><b>Personal data</b>None collected</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><span><b>Analytics &amp; tracking</b>None</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><span><b>Internet connection</b>Not required or used</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg><span><b>Accounts &amp; ads</b>No sign-in, no ads</span></li>
+      </ul>
+    </div>
+
+    <article>
+      <section id="collect">
+        <h2 class="s">Data we collect</h2>
+        <p>BitCalc does not collect any personal information. We do not ask for your name, email address, location, contacts, files, or any other identifying details, and the app has no account or sign-in.</p>
+        <div class="quote">BitCalc does not collect, store, transmit, or share any personal data or usage analytics. All calculations are performed entirely offline on your device.</div>
+      </section>
+
+      <section id="offline">
+        <h2 class="s">Offline by design</h2>
+        <p>All features run locally on your computer. This includes:</p>
+        <ul>
+          <li>The multi-radix programmer calculator and 64-bit bit grid</li>
+          <li>Bitwise and bit-shift operations and the expression input bar</li>
+          <li>The IEEE-754 float analyzer</li>
+          <li>The frame and protocol checksum suite (CRC-8, CRC-16, Checksum-8, Sum-16, XOR, Two's Complement)</li>
+          <li>The number converter, standard calculator and calculation history</li>
+        </ul>
+        <p>Values and hex frames you type or paste are processed in the app on your device and are never sent anywhere.</p>
+      </section>
+
+      <section id="local">
+        <h2 class="s">Data stored on your device</h2>
+        <p>To work as expected, BitCalc may keep a small amount of information locally on your device:</p>
+        <div class="tw"><table>
+          <thead><tr><th>Item</th><th>Purpose</th><th>Where it goes</th></tr></thead>
+          <tbody>
+            <tr><td>App settings (theme, always-on-top, default bit width, hex case)</td><td>Remember your preferences</td><td>Stays on your device</td></tr>
+            <tr><td>Calculation history</td><td>Let you review and copy earlier results</td><td>Stays on your device</td></tr>
+          </tbody>
+        </table></div>
+        <p>This information is never uploaded, shared, or read by us. You can remove it by clearing the history in the app or by uninstalling BitCalc.</p>
+      </section>
+
+      <section id="third">
+        <h2 class="s">Third parties</h2>
+        <p>BitCalc does not include advertising, analytics, or tracking software, and it does not share information with third parties, because it does not collect any.</p>
+      </section>
+
+      <section id="store">
+        <h2 class="s">Microsoft Store</h2>
+        <p>You download BitCalc through the Microsoft Store. Microsoft may collect information about your download and use of the Store under its own privacy statement. We do not receive personal data from Microsoft about you. See the <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsoft Privacy Statement</a> for details.</p>
+      </section>
+
+      <section id="children">
+        <h2 class="s">Children's privacy</h2>
+        <p>BitCalc collects no personal data from anyone, including children under 13 (or the minimum age set by local law).</p>
+      </section>
+
+      <section id="changes">
+        <h2 class="s">Changes to this policy</h2>
+        <p>If BitCalc's data practices change, for example by adding an online feature, we will update this page and the "last updated" date below before the change is released.</p>
+        <p><strong>Last updated:</strong> <time datetime="2026-10-26">October 26, 2026</time></p>
+      </section>
+
+      <section id="contact">
+        <h2 class="s">Contact</h2>
+        <p>Questions about this policy? Contact the developer at <a href="mailto:harshitkishoresingh26@gmail.com">harshitkishoresingh26@gmail.com</a>.</p>
+      </section>
+    </article>
+  </main>
+</div>
+
+<footer>&copy; <span id="year">2026</span> BitCalc. All rights reserved.</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  function isDark(){
+    var t=root.getAttribute('data-theme');
+    return t ? t==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function label(){ btn.textContent = isDark() ? 'Light mode' : 'Dark mode'; }
+  try{ var saved=localStorage.getItem('bitcalc-theme'); if(saved) root.setAttribute('data-theme',saved); }catch(e){}
+  label();
+  btn.addEventListener('click',function(){
+    var next=isDark()?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem('bitcalc-theme',next); }catch(e){}
+    label();
+  });
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var map={}; links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+  var secs=[].slice.call(document.querySelectorAll('main [id]'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && map[e.target.id]){
+          links.forEach(function(a){ a.classList.remove('active'); a.removeAttribute('aria-current'); });
+          map[e.target.id].classList.add('active');
+          map[e.target.id].setAttribute('aria-current','true');
+        }
+      });
+    },{rootMargin:'-20% 0px -70% 0px'});
+    secs.forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
